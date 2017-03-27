@@ -31,19 +31,19 @@
         &lt;head&gt;                                   &lt;!--l'en-tête du document--!&gt;
           &lt;meta charset="utf-8" /&gt;               &lt;!--pour choisir le code d encodage UTF8--!&gt;
           &lt;title&gt; Un titre &lt;/title&gt;        &lt;!--il faut absolument un titre !--!&gt;
-        &lt;head&gt;
+        &lt;/head&gt;
 		
         &lt;body&gt;                                   &lt;!--et le corps du document--!&gt;
 
-        &lt;body&gt;
+        &lt;/body&gt;
 	  
-     &lt;html&gt;			
+     &lt;/html&gt;			
     </code>
     </pre> 
 	
     <h2> Le corps du document </h2>
 	
-	<p> Pour structurer la page web on peut ajouter : 
+	<p> Pour structurer la page web on peut ajouter entre les balises &lt;body&gt; et &lt;/body&gt;: 
     <ul> 
       <li> des titres </li>
       <li> des paragraphes de texte </li>
@@ -52,10 +52,69 @@
     </ul>
     </p>
 
-		</p> 	
-		<p> On écrit un <strong> deuxième </strong> paragraphe de <mark> blablabla </mark> .......truc machin..et on termine par...bidule ! (encore) </p>
+    <p> Voyons tout de suite un exemple pour les notations :
+	<pre> 
+    <code>
+        &lt;body&gt;  
+		
+		&lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;		
+		
+		&lt;p&gt; On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire &lt;/p&gt;
+		&lt;p&gt; Et on rajoute un second paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
+		on a d'abord un mot &lt;mark&gt; important &lt;/mark&gt;, 
+		puis un mot &lt;em&gt; très important &lt;/em&gt; , 
+		puis un mot  &lt;strong&gt; très très important ! &lt;/strong&gt; 
+		&lt;p&gt;
 			
-		<h2> Titre 2 </h2>
+		&lt;h2&gt; Titre de niveau 2 &lt;/h2&gt;
+		
+		&lt;p&gt; Je rajoute encore un paragraphe pour vous dire que je vais vous présenter les trois types de liste
+        notre disposition : les listes ordonnées, les listes désordonnées et les liste de définition. Voyons ça :&lt;/p&gt;
+		
+		&lt;ol&gt; une liste ordonnée
+			&lt;li&gt; ligne 1 &lt;/li&gt;
+			&lt;li&gt; ligne 2 &lt;/li&gt;
+			&lt;li&gt; ligne 3 &lt;/li&gt;
+		&lt;/ol&gt;
+			
+		&lt;ul&gt; une liste désordonnée
+			&lt;li&gt; une ligne &lt;/li&gt;
+			&lt;li&gt; une autre ligne &lt;/li&gt;
+			&lt;li&gt; et encore une &lt;/li&gt;
+		&lt;/ul&gt;
+			
+		&lt;dl&gt; enfin, une liste de définition
+			&lt;dt&gt; un terme &lt;/dt&gt;
+			&lt;dd&gt; une definition &lt;/dd&gt;
+			&lt;dd&gt; et une autre definition pour le même terme &lt;/dd&gt;
+			&lt;dt&gt; un deuxieme terme &lt;/dt&gt;
+			&lt;dd&gt; et une deuxieme definition &lt;dd&gt;
+		&lt;/dl&gt;
+			
+        &lt;h3&gt; Titre de niveau 3 &lt;/h3&gt;
+		&lt;h4&gt; Titre de niveau 4 &lt;/h4&gt;
+		&lt;h5&gt; Titre de niveau 5 &lt;/h5&gt;
+		&lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;
+        
+		&lt;/body&gt;		
+    </code>
+    </pre> 
+	</p>
+	
+	<p> Ce qui donne </pre>		
+	<h1>Titre de niveau 1 </h1>		
+		
+    <p> On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire </p>
+	<p> Et on rajoute un second paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
+		on a d'abord un mot <mark> important </mark>;, 
+		puis un mot <em> très important </em>; , 
+		puis un mot <strong> très très important ! </strong> 
+	</p>
+			
+	<h2> Titre de niveau 2 </h2>
+		
+		<p> Je rajoute encore un paragraphe pour vous dire que je vais vous présenter les trois types de liste
+        notre disposition : les listes ordonnées, les listes désordonnées et les liste de définition. Voyons ça :</p>
 		
 		<ol> une liste ordonnée
 			<li> ligne 1 </li>
@@ -63,23 +122,25 @@
 			<li> ligne 3 </li>
 		</ol>
 			
-		<ul> et une liste désordonnée
+		<ul> une liste désordonnée
 			<li> une ligne </li>
 			<li> une autre ligne </li>
 			<li> et encore une </li>
 		</ul>
 			
 		<dl> enfin, une liste de définition
-			<dt> un terme </dt>
+			<dt> >gt;
 			<dd> une definition </dd>
 			<dd> et une autre definition pour le même terme </dd>
 			<dt> un deuxieme terme </dt>
 			<dd> et une deuxieme definition <dd>
 		</dl>
 			
-		<h3> Titre 3 </h3>
-		<h4> Titre 4 </h4>
-		<h5> Titre 5 </h5>
-		<h6> Titre 6 </h6>
+    <h3> Titre de niveau 3 </h3>
+    <h4> Titre de niveau 4 </h4>
+    <h5> Titre de niveau 5 </h5>
+    <h6> Titre de niveau 6 </h6>	
+	</p>
+
 	</body>
 </html>
