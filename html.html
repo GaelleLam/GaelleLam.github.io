@@ -17,15 +17,17 @@
     <nav>
       <ul> 
         <li> HTML </li>
-        <ul> 
-          <li> <a href="#introHtml"> Introduction </a> </li>
-          <li> <a href="#structureHtml"> Structure de base </a> </li>
-          <li> <a href="#docHtml"> Le corps du document </a> </li>
-          <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
-          <li> <a href="#liensHtml"> Les liens HyperText </a> </li>
-          <li> <a href="#imagesHtml"> Insérer une image </a> </li>
-          <li> <a href="#tableauxHtml"> Les tableaux </a> </li>
-        </ul>
+        <li> 
+          <ul> 
+            <li> <a href="#introHtml"> Introduction </a> </li>
+            <li> <a href="#structureHtml"> Structure de base </a> </li>
+            <li> <a href="#docHtml"> Le corps du document </a> </li>
+            <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
+            <li> <a href="#liensHtml"> Les liens HyperText </a> </li>
+            <li> <a href="#imagesHtml"> Insérer une image </a> </li>
+            <li> <a href="#tableauxHtml"> Les tableaux </a> </li>
+          </ul>
+        </li>
         <li> <a href="index.html"> Retour vers la page principale </a> </li>    
       </ul>
     </nav>
@@ -39,7 +41,7 @@
     
       <p> On écrit un document HTML dans un éditeur de texte classique.
         Il permet de présenter de manière sémantique les données de type texte, image ou vidéos et il est structuré par des balises. </p>
-      <p> Une balise est présentée entre chevrons : <pre> <code> &lt;balise&gt; </code> </pre>
+      <p> Une balise est présentée entre chevrons : &lt;balise&gt;
         Il existe deux formes de balises : </p>
       <ul> 
         <li> la forme complète qui s'écrit : &lt;balise&gt; du texte et d'autres balises imbriquées (les "enfants") &lt;/balise&gt; </li>
@@ -83,20 +85,14 @@
       <h3> Les titres </h3>
       <p> Les titres doivent être écrits entre les balises de type &lt;h<em>n</em>&gt; où <em>n</em> est un chiffre compris entre 1 et 6 inclus. 
         Ce chiffre indique le niveau d'imbrication du titre. On distingue ainsi : </p>
-      <dl> 
-        <dt> <h1>Les titres de niveau 1 </h1>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;  </dd>
-        <dt> <h2>Les titres de niveau 2 </h2>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h2&gt; Titre de niveau 2 &lt;/h2&gt;  </dd>
-        <dt> <h3>Les titres de niveau 3 </h3>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h3&gt; Titre de niveau 3 &lt;/h3&gt;  </dd>
-        <dt> <h4>Les titres de niveau 4 </h4>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h4&gt; Titre de niveau 4 &lt;/h4&gt;  </dd>
-        <dt> <h5>Les titres de niveau 5 </h5>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h5&gt; Titre de niveau 5 &lt;/h5&gt;  </dd>
-        <dt> <h6>Les titres de niveau 6 </h6>   </dt>
-        <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;  </dd>
-      </dl>
+      <ul> 
+        <li> &lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;  </li>
+        <li> &lt;h2&gt; Titre de niveau 2 &lt;/h2&gt;  </li>
+        <li> &lt;h3&gt; Titre de niveau 3 &lt;/h3&gt;  </li>
+        <li> &lt;h4&gt; Titre de niveau 4 &lt;/h4&gt;  </li>
+        <li> &lt;h5&gt; Titre de niveau 5 &lt;/h5&gt;  </li>
+        <li> &lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;  </li>
+      </ul>
       <p>Il peut y avoir plusieurs titres de niveau inférieur après un titre de niveau supérieur. Par exemple, on peut insérer deux titres de niveau 2 suite à un titre de niveau 1. 
         Par contre, il faut veiller à conserver l'ordre d'imbrication des titres et ne pas insérer un titre de niveau 2 avant un titre de niveau 1 par exemple.</p>
 
@@ -134,15 +130,15 @@
       <p> Elles permettent de présenter des éléments qui sont numérotés. Elles doivent être décrites entre les balises &lt;ol&gt; et &lt;/ol&gt; 
         et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
       <p>Voici un exemple : </p>
-      <pre>     
-        &lt;ol&gt; une liste ordonnée
+      <pre>  
+        &lt;ol&gt; 
           &lt;li&gt; ligne 1 &lt;/li&gt;
           &lt;li&gt; ligne 2 &lt;/li&gt;
           &lt;li&gt; ligne 3 &lt;/li&gt;
         &lt;/ol&gt;
       </pre>
       <p>On obtient:</p>
-      <ol> une liste ordonnée
+      <ol> 
         <li> ligne 1 </li>
         <li> ligne 2 </li>
         <li> ligne 3 </li>
@@ -154,14 +150,14 @@
         et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
       <p> Voici un exemple : </p>
       <pre>     
-        &lt;ul&gt; une liste désordonnée
+        &lt;ul&gt; 
           &lt;li&gt; une ligne &lt;/li&gt;
           &lt;li&gt; une autre ligne &lt;/li&gt;
           &lt;li&gt; et encore une &lt;/li&gt;
         &lt;/ul&gt;
       </pre>
       <p>On obtient:</p>
-      <ul> une liste désordonnée
+      <ul> 
         <li> une ligne </li>
         <li> une autre ligne </li>
         <li> et encore une </li>
@@ -169,11 +165,11 @@
     
       <h4> Les listes de définition </h4>
       <p> Les listes de définition, comme leur nom l'indique, permettent de présenter des termes et leur(s) définition(s). Elles doivent être décrites entre les balises &lt;dl&gt; et &lt;/dl&gt; ,
-        chaque terme listé doit être indiqué entre les balises &lt;dt&gt; et &lt;/dt&gt et les définitions entre les balises &lt;dd&gt; et &lt;/dd&gt;. 
+        chaque terme listé doit être indiqué entre les balises &lt;dt&gt; et &lt;/dt&gt; et les définitions entre les balises &lt;dd&gt; et &lt;/dd&gt;. 
         Il peut y avoir plusieurs termes pour une définition et/ou plusieurs définitions pour un terme. </p>
       <p> Voici un exemple : </p>
       <pre>     
-        &lt;dl&gt; une liste de définition
+        &lt;dl&gt;
           &lt;dt&gt; un terme &lt;/dt&gt;
           &lt;dd&gt; une definition &lt;/dd&gt;
           &lt;dd&gt; et une autre definition pour le même terme &lt;/dd&gt;
@@ -182,7 +178,7 @@
         &lt;/dl&gt;
       </pre>
       <p> On obtient: </p>
-      <dl> une liste de définition
+      <dl>
         <dt> un terme </dt>
         <dd> une definition </dd>
         <dd> et une autre definition pour le même terme </dd>
@@ -213,19 +209,16 @@
       </pre>
       <p> Ce qui donne :</p>
       <p> <a href="https://romaing44.github.io/essaie_page.html"> Si vous aimez les chats ET les sabres lasers... </a>
-      <p> Pour indiquer où afficher la ressource liée, on peut utiliser l'attribut "target" associé à l'un des mots-clés suivants :
-        <ul>
-          <li>_self : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné. </li>
-          <li>_blank : charge la réponse dans un nouveau contexte de navigation. </li>
-          <li>_parent : charge la réponse dans le contexte de navigation de plus haut niveau </li>
+      <p> Pour indiquer où afficher la ressource liée, on peut utiliser l'attribut "target" associé à l'un des mots-clés suivants :</p>
+      <ul>
+        <li> "_self" : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné. </li>
+        <li> "_blank" : charge la réponse dans un nouveau contexte de navigation. </li>
+        <li> "_parent" : charge la réponse dans le contexte de navigation de plus haut niveau 
             (c'est à dire, le contexte de navigation parent par rapport à l'actuel, et qui n'a lui-même aucun parent). 
             S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
-        </ul>
-        Par exemple, on peut ouvrir le site mentionné précédemment dans un nouvel onglet grâce à la commande
-        <pre>     
-          &lt;a href="https://romaing44.github.io/essaie_page.html" target="_blank"&gt; Pour revoir à l'infini ce chef d'oeuvre !&lt;/a&gt;
-        </pre>
-      </p>
+      </ul>
+      <p> Par exemple, on peut ouvrir le site mentionné précédemment dans un nouvel onglet grâce à la commande &lt;a href="https://romaing44.github.io/essaie_page.html" target="_blank"&gt; Pour revoir à l'infini ce chef d'oeuvre !&lt;/a&gt;</p>
+      
       <p> On peut faire des liens vers une autre page de notre site web en indiquant tout simplement le nom du fichier html associé. 
         Eventuellement, si la page est rangée dans un autre sous-dossier, on rajoute dans le href l'adresse relative du fichier visé.</p>
       <p> Enfin, si on veut faire un lien vers une section ou un article dans la même page, il faut d'abord lui attribuer un identifiant.
