@@ -14,17 +14,16 @@
 	On écrit un document HTML dans un éditeur de texte classique.
     Il permet de présenter de manière sémantique les données de type texte, image ou vidéos et il est structuré par des balises. </p>
     <p> Une balise est présentée entre chevrons : <pre> <code> &lt;balise&gt; </code> </pre>
-	Il existe deux formes de balises : 
+	Il existe deux formes de balises : </p>
 	<ul> 
-	  <li> la forme complète qui s'écrit <pre> <code> &lt;balise&gt; du texte et d'autres balises imbriquées (les "enfants") &lt;/balise&gt; </code> </pre> </li>
-	  <li>la forme auto-fermante qui s'écrit <pre> <code> &lt;balise/&gt; </code> </pre> </p> </li>
+	  <li> la forme complète qui s'écrit : &lt;balise&gt; du texte et d'autres balises imbriquées (les "enfants") &lt;/balise&gt; </li>
+	  <li>la forme auto-fermante qui s'écrit &lt;balise/&gt; </li>
 	</ul>
 	
     <h2> Structure de base </h2>
 	
-    <p> La structure minimale d'un document HTML est de la forme suivante : 
+    <p> La structure minimale d'un document HTML est de la forme suivante : </p>
     <pre> 
-    <code>
       &lt;! doctype html&gt;                           &lt;!--cette ligne précise quel langage HTML est utilisé (HTML5 ici)--!&gt;
 	  
       &lt;html&gt;                                     &lt;!--pour commencer le document--!&gt;
@@ -39,23 +38,21 @@
         &lt;/body&gt;
 	  
      &lt;/html&gt;			
-    </code>
     </pre> 
 	
     <h2> Le corps du document </h2>
 	
-	<p> Pour structurer la page web on peut ajouter entre les balises &lt;body&gt; et &lt;/body&gt; plusieurs éléments :
+	<p> Pour structurer la page web on peut ajouter entre les balises &lt;body&gt; et &lt;/body&gt; plusieurs éléments : </p>
     <ul> 
       <li> des titres </li>
       <li> des paragraphes de texte </li>
 	  <li> la mise en valeur du texte </li>
 	  <li> des listes </li>
     </ul>
-    </p>
 
 	<h3> Les titres </h3>
 	<p> Les titres doivent être écrits entre les balises de type &lt;h<em>n</em>&gt; où <em>n</em> est un chiffre compris entre 1 et 6 inclus. 
-	Ce chiffre indique le niveau d'imbrication du titre. On distingue ainsi : 
+	Ce chiffre indique le niveau d'imbrication du titre. On distingue ainsi : </p>
     <dl> 
       <dt> <h1>Les titres de niveau 1 </h1>	</dt>
       <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;  </dd>
@@ -70,9 +67,8 @@
       <dt> <h6>Les titres de niveau 6 </h6>	</dt>
       <dd> qui doivent être codés dans notre fichier HTML sous la forme &lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;  </dd>
     </dl>
-	Il peut y avoir plusieurs titres de niveau inférieur après un titre de niveau supérieur. Par exemple, on peut insérer deux titres de niveau 2 suite à un titre de niveau 1. 
-	Par contre, il faut veiller à conserver l'ordre d'imbrication des titres et ne pas insérer un titre de niveau 2 avant un titre de niveau 1 par exemple.
-	</p>
+	<p>Il peut y avoir plusieurs titres de niveau inférieur après un titre de niveau supérieur. Par exemple, on peut insérer deux titres de niveau 2 suite à un titre de niveau 1. 
+	Par contre, il faut veiller à conserver l'ordre d'imbrication des titres et ne pas insérer un titre de niveau 2 avant un titre de niveau 1 par exemple.</p>
 
 	<h3> Les paragraphes </h3>
 	<p> Il est très facile d'insérer un paragraphe dans une page web en utilsant les balises &lt;p&gt; et &lt;/p&gt; Par exemple on note : </p>
@@ -80,77 +76,71 @@
       &lt;p&gt; On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire &lt;/p&gt;
       &lt;p&gt; Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! &lt;/p&gt;
     </pre>
-    et on obtient : 
-	  <p> On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire </p> 
-      <p> Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! </p> 
+    <p> et on obtient : </p>
+	<p> On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire </p> 
+    <p> Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! </p> 
 	
 	<h3> La mise en valeur </h3>
 	<p> Il se peut que vous ayez besoin de mettre en valeur certains mots, phrases ou paragraphes pour la compréhension sémantique de votre contenu.
-    Dans ce cas vous pouvez utiliser trois balises &lt;mark&gt; &lt;/mark&gt;, &lt;em&gt; &lt;/em&gt; et &lt;strong&gt; &lt;/strong&gt;. Voici un exemple d'utilisation : 
+    Dans ce cas vous pouvez utiliser trois balises &lt;mark&gt; &lt;/mark&gt;, &lt;em&gt; &lt;/em&gt; et &lt;strong&gt; &lt;/strong&gt;. Voici un exemple d'utilisation : </p>
     <pre>
-     code HTML : 
       &lt;p&gt; Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
       on a d'abord un mot &lt;mark&gt; important &lt;/mark&gt;, 
       puis un mot &lt;em&gt; très important &lt;/em&gt; , 
       et enfin un mot  &lt;strong&gt; très très important ! &lt;/strong&gt; 
       &lt;p&gt;
-     résultat
-      <p> Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
-	  on a d'abord un mot <mark> important </mark>;, 
-	  puis un mot <em> très important </em>; , 
-	  et enfin un mot <strong> très très important ! </strong> 
-	  </p>
     </pre>
-	</p>
+    <p>On obtient :</p>
+    <p> Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : on a d'abord un mot <mark> important </mark>;, 
+	puis un mot <em> très important </em>; et enfin un mot <strong> très très important ! </strong> </p>
 
 
 	<h3> Les listes </h3>
 	<p> On distingue les listes ordonnées, les listes désordonnées et les listes de définitions.</p>
 
-	<p> Les listes ordonnées permettent de présenter des éléments qui sont numérotés. Elles doivent être décrites entre les balises &lt;ol&gt; et &lt;/ol&gt; 
+	<h4> Les listes ordonnées </h4>
+	<p> Elles permettent de présenter des éléments qui sont numérotés. Elles doivent être décrites entre les balises &lt;ol&gt; et &lt;/ol&gt; 
     et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
-	<p> Voici un exemple : 
+	<p>Voici un exemple : </p>
     <pre>     
-     code HTML : 
       &lt;ol&gt; une liste ordonnée
       &lt;li&gt; ligne 1 &lt;/li&gt;
       &lt;li&gt; ligne 2 &lt;/li&gt;
       &lt;li&gt; ligne 3 &lt;/li&gt;
       &lt;/ol&gt;
-     résultat : 
-      <ol> une liste ordonnée
+    </pre>
+    <p>On obtient:</p>
+    <ol> une liste ordonnée
 	  <li> ligne 1 </li>
       <li> ligne 2 </li>
       <li> ligne 3 </li>
-      </ol>
-    </pre>
-    </p>
+    </ol>
+    
 
-	<p> Les listes désordonnées permettent de présenter des éléments avec des puces. Elles doivent être décrites entre les balises &lt;ul&gt; et &lt;/ul&gt; 
+	<h4> Les listes désordonnées </h4>
+	<p> Elles permettent de présenter des éléments avec des puces. Elles doivent être décrites entre les balises &lt;ul&gt; et &lt;/ul&gt; 
     et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
-	<p> Voici un exemple : 
+    <p> Voici un exemple : </p>
     <pre>     
-        code HTML : 
       &lt;ul&gt; une liste désordonnée
       &lt;li&gt; une ligne &lt;/li&gt;
       &lt;li&gt; une autre ligne &lt;/li&gt;
       &lt;li&gt; et encore une &lt;/li&gt;
       &lt;/ul&gt;
-      résultat : 
-      <ul> une liste désordonnée
+    </pre>
+    <p>On obtient:</p>
+    <ul> une liste désordonnée
 	  <li> une ligne </li>
       <li> une autre ligne </li>
       <li> et encore une </li>
-      </ul>
-    </pre>
-    </p>
+    </ul>
 	
+    <h4> Les listes de définition </h4>
 	<p> Les listes de définition, comme leur nom l'indique, permettent de présenter des termes et leur(s) définition(s). Elles doivent être décrites entre les balises &lt;dl&gt; et &lt;/dl&gt; ,
     chaque terme listé doit être indiqué entre les balises &lt;dt&gt; et &lt;/dt&gt et les définitions entre les balises &lt;dd&gt; et &lt;/dd&gt;. 
     Il peut y avoir plusieurs termes pour une définition et/ou plusieurs définitions pour un terme. </p>
-	<p> Voici un exemple : 
+	<p> Voici un exemple : </p>
     <pre>     
-        code HTML : 
       &lt;dl&gt; une liste de définition
       &lt;dt&gt; un terme &lt;/dt&gt;
       &lt;dd&gt; une definition &lt;/dd&gt;
@@ -158,19 +148,15 @@
       &lt;dt&gt; un deuxieme terme &lt;/dt&gt;
       &lt;dd&gt; et une deuxieme definition &lt;dd&gt;
       &lt;/dl&gt;
-      résultat : 
-      <dl> une liste de définition
+    </pre>
+    <p> On obtient: </p>
+    <dl> une liste de définition
       <dt> un terme </dt>
       <dd> une definition </dd>
       <dd> et une autre definition pour le même terme </dd>
       <dt> un deuxieme terme </dt>
       <dd> et une deuxieme definition <dd>
     </dl>
-    </pre>
-    </p>
-
-
-
 
 
     <p> Voyons tout de suite un exemple pour les notations :
