@@ -21,6 +21,9 @@
 	    <li> <a href="#introHtml"> Introduction </a> </li>
         <li> <a href="#structureHtml"> Structure de base </a> </li>
         <li> <a href="#docHtml"> Le corps du document </a> </li>
+        <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
+        <li> <a href="#liensHtml"> Organisation de votre document </a> </li>
+        <li> <a href="#imagesHtml"> Insérer une image </a> </li>
       </ul>
       <li> <a href="index.html"> Retour vers la page principale </a> </li>	
     </ul>
@@ -196,6 +199,101 @@
       <li> Un espace latéral qui permet d'insérer notamment des publicités dont le contenu sera décrit dans le document html entre les balises &lt;aside&gt; et &lt;/aside&gt; </li>
     </ul>
     </section>
+
+    <section id="liensHtml">
+    <h2> Les liens HyperText </h2>
+    <p> Les liens hypertext </p>
+    </section>
+
+    <section id="imagesHtml">
+    <h2> Insérer une image </h2>
+    <p>  </p>
+    </section>
+
+    <section id="tableauxHtml">
+    <h2> Les tableaux </h2>
+    <p> Un tableau en HTML est défini par un ensemble de lignes qui contiennent des cellules. La notion de colonne n'existe pas. Chaque ligne peut donc avoir un nombre différent de cellules.
+    Le tableau doit être insérer entre les balises &lt;table&gt; et &lt;/table&gt;. Entre ces balises on intègre chaque ligne entre les balises &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;td&gt; et &lt;/td&gt;  </p>
+    <p> Par exemple, pour insérer un tableau ayant deux lignes contenant chacune 2 cellules, avec A et B dans la première ligne et C et D dans la seconde ligne, on écrit : </p>
+    <pre>     
+      &lt;table&gt; 
+        &lt;tr&gt; 
+          &lt;td&gt; A &lt;/td&gt;
+          &lt;td&gt; B &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td&gt; C &lt;/td&gt;
+          &lt;td&gt; D &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt; 
+    </pre>
+    <p> On obtient : </p>
+     <table> 
+       <tr>  
+         <td> A </td>
+         <td> B </td>
+       </tr>
+       <tr> 
+         <td> C </td>
+         <td> D </td>
+       </tr>
+    </table> 
+
+    <p> Pour faire un tableau un peu plus complexe (à l'écriture mais qui facilitera la lecture bien  sûr !), on peut y ajouter une en-tête et/ou un pied de tableau.
+    L'entête et le pied s'insèrent entre les balises du tableau et sont marqués par les balises &lt;thead&gt; &lt;/thead&gt; pour l'en-tête et &lt;tfoot&gt; &lt;/tfoot&gt; pour le pied. 
+    Chaque cellule dans l'en-tête et le pied doivent être intégrées entre les balises  &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;th&gt; et &lt;/th&gt;.
+    En général, on écrit l'en-tête et le pied au début dans le code mais ils s'afficheront effectivement à leur place sur la page web, à savoir en haut et en bas du tableau.</p>
+    <p> Voici l'écriture du tableau précédent avec en plus, une en-tête et un pied de tableau </p>
+    <pre>     
+      &lt;table&gt; 
+        &lt;thead&gt;                                &lt;!--en-tête--!&gt; 
+          &lt;th&gt; Nom &lt;/th&gt;        
+          &lt;th&gt; Prenom &lt;/th&gt;
+        &lt;/thead&gt;
+        &lt;tfoot&gt;                                &lt;!--pied--!&gt;  
+          &lt;th&gt; Fin &lt;/th&gt;
+          &lt;th&gt; Fin &lt;/th&gt;
+        &lt;/tfoot&gt;
+        &lt;tr&gt;                                   &lt;!--corps--!&gt;   
+          &lt;td&gt; A &lt;/td&gt;
+          &lt;td&gt; B &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td&gt; C &lt;/td&gt;
+          &lt;td&gt; D &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt; 
+    </pre>
+    <p> On obtient : </p>
+    <table>  
+       <thead> 
+         <th> Entête1 </th>        
+         <th> Entête2 </th>
+       </thead>
+       <tfoot>  
+         <th> Pied1 <th>
+         <th> Pied2 </th>
+       </tfoot>
+       <tr>  
+         <td> A </td>
+         <td> B </td>
+       </tr>
+       <tr> 
+         <td> C </td>
+         <td> D </td>
+       </tr>
+    </table> 
+
+    <p> On peut aussi créer des cellules plus grandes que celles définies dans le tableau à la base. 
+    Par exemple, on peut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même ligne. On rajoute alors un attribut à &lt;th&gt; ou &lt;td&gt; 
+   (selon si on se trouve dans l'en-tête, le pied ou le corps du tableau) et on écrit le contenu de la cellule entre les balises &lt;th rowspan <em>n</em>&gt; &lt;/th&gt; 
+    ou &lt;td rowspan <em>n</em>&gt; &lt;/td&gt;. Si on veut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même "colonne" 
+    on écrit le contenu de la cellule entre les balises &lt;th colspan <em>n</em>&gt; &lt;/th&gt; ou &lt;td colspan <em>n</em>&gt; &lt;/td&gt;. </p>
+    <p> Comme on n'est pas des sauvages, on va aussi rajouter une légende à notre tableau entre les balises &lt;caption&gt; et &lt;/caption&gt;. 
+    Attention ! Il faut impérativement insérer les balises "captions" juste après la balise "table" sinon vous aurez à faire à un bugg pas sympa du tout !</p>
+
+    </section>
+
 
 
     <a href="index.html"> Retour vers la page principale </a>	
