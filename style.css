@@ -14,7 +14,6 @@
   display: inline-block;
 }
 
-
 .rouge {
   background-color: Tomato;
 }
@@ -23,6 +22,10 @@
   background-color: YellowGreen;
 }
 
-.bleu {
+.bleuTransparent {
   background-color: rgba(70,130,180,0.3);
+}
+
+.bleuOpaque {
+  background-color: rgb(70,130,180);
 }
