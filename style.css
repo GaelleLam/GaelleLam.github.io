@@ -1,12 +1,19 @@
+.entete {
+  text-align: center;
+}
+
 .nav {
   height: 200px;
   width: 300px;
   display: inline-block;
 }
 
-.entete {
-  text-align: center;
+.contenu {
+  height: 2000px;
+  width: 1000px;
+  display: inline-block;
 }
+
 
 .rouge {
   background-color: Tomato;
