@@ -1,0 +1,26 @@
+.carre {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  position: relative;
+}
+
+.rouge {
+  background-color: Tomato;
+  border-radius: 20px;
+  top: 30px;
+  left: 30px;
+}
+
+.vert {
+  background-color: YellowGreen;
+  border-radius: 80px/20px;
+  top: 60px;
+  left:-90px;
+}
+
+.bleu {
+  background-color: SteelBlue;
+  top: 90px;
+  left:-210px;
+}

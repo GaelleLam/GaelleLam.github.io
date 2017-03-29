@@ -1,0 +1,17 @@
+.nav {
+  height: 800px;
+  width: 300px;
+  display: block;
+}
+
+.rouge {
+  background-color: Tomato;
+}
+
+.vert {
+  background-color: YellowGreen;
+}
+
+.bleu {
+  background-color: SteelBlue;
+}
