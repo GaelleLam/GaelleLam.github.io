@@ -5,6 +5,11 @@
   border: 10px groove green;
 }
 
+.entete {
+  height: 200px;
+  display: inline;
+}
+
 .rouge {
   background-color: Tomato;
 }
