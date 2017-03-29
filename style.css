@@ -27,5 +27,5 @@
 }
 
 .bleuOpaque {
-  borber-style: 20px solid SteelBlue;
+  background-color: rgba(70,130,180,0.8);
 }
