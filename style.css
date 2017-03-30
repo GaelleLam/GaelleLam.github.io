@@ -3,13 +3,13 @@
 }
 
 .nav {
-  height: 200px;
-  width: 300px;
+  height: 200em;
+  width: 300em;
   display: inline-block;
 }
 
 .contenu {
-  width: 1000px;
+  width: 1000em;
   display: inline-block;
 }
 
