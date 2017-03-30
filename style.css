@@ -9,11 +9,11 @@
 }
 
 .nav {
-  flex-grow: <1>;
+  flex-shrink: <1>;
 }
 
 .contenu {
-  flex-grow: <3>;
+  flex-shrink: <3>;
 }
 
 .rouge {
