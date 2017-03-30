@@ -10,11 +10,11 @@
 }
 
 .nav {
-  flex-basis: 10em;
+  flex-basis: 5em;
 }
 
 .contenu {
-  flex-growth: 1;
+  flex-grow: 1;
 }
 
 .rouge {
