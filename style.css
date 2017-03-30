@@ -10,12 +10,12 @@
 
 .nav {
   width: 20em;
-  /*display: inline-block;*/
+  display: inline-block;
 }
 
 .contenu {
-  width: 10em;
-  /*display: inline-block;*/
+  /*width: 10em;*/
+  display: inline-block;
 }
 
 .rouge {
