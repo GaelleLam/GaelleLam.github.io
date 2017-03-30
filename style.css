@@ -9,11 +9,14 @@
 }
 
 .nav {
-  flex-shrink: <1>;
+  width: 20em;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .contenu {
-  flex-shrink: <3>;
+  width: 60em;
 }
 
 .rouge {
