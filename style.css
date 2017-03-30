@@ -11,12 +11,12 @@
 .nav {
   width: 20em;
   position: fixed;
-  top: 0;
+  top: 100;
   left: 0;
 }
 
 .contenu {
-  width: 60em;
+  width: 62em;
 }
 
 .rouge {
