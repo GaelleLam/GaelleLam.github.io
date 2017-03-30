@@ -11,333 +11,328 @@
       <h1> Bases de HTML </h1>
     </header>
 
-    <footer>
+    <footer class="entete rouge">
+      <a href="index.html"> Retour vers la page principale </a>  
     </footer>
-
-    <aside>
-    </aside>
 
     <div class="navEtContenu">
 
-    <nav class="nav vert">
-      <ul> 
-        <li> HTML </li>
-        <li> 
+      <nav class="nav vert">
+        <ul> 
+          <li> HTML </li>
+          <li> 
+            <ul> 
+              <li> <a href="#introHtml"> Introduction </a> </li>
+              <li> <a href="#structureHtml"> Structure de base </a> </li>
+              <li> <a href="#docHtml"> Le corps du document </a> </li>
+              <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
+              <li> <a href="#liensHtml"> Les liens HyperText </a> </li>
+              <li> <a href="#imagesHtml"> Insérer une image </a> </li>
+              <li> <a href="#tableauxHtml"> Les tableaux </a> </li>
+            </ul>
+          </li>
+          <li> <a href="index.html"> Retour vers la page principale </a> </li>    
+        </ul>
+      </nav>
+
+      <div class="contenu bleuTransparent">
+        <section id="introHtml">
+          <h2 class="bleuOpaque"> Introduction </h2>
+    
+          <p> On écrit un document HTML dans un éditeur de texte classique.
+            Il permet de présenter de manière sémantique les données de type texte, image ou vidéos et il est structuré par des balises. </p>
+          <p> Une balise est présentée entre chevrons : &lt;balise&gt;
+            Il existe deux formes de balises : </p>
           <ul> 
-            <li> <a href="#introHtml"> Introduction </a> </li>
-            <li> <a href="#structureHtml"> Structure de base </a> </li>
-            <li> <a href="#docHtml"> Le corps du document </a> </li>
-            <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
-            <li> <a href="#liensHtml"> Les liens HyperText </a> </li>
-            <li> <a href="#imagesHtml"> Insérer une image </a> </li>
-            <li> <a href="#tableauxHtml"> Les tableaux </a> </li>
+            <li> la forme complète qui s'écrit : &lt;balise&gt; du texte et d'autres balises imbriquées (les "enfants") &lt;/balise&gt; </li>
+            <li>la forme auto-fermante qui s'écrit &lt;balise/&gt; </li>
           </ul>
-        </li>
-        <li> <a href="index.html"> Retour vers la page principale </a> </li>    
-      </ul>
-    </nav>
+        </section>
 
-    <div class="contenu bleuTransparent">
-    <section id="introHtml">
-      <h2 class="bleuOpaque"> Introduction </h2>
+        <section id="structureHtml">
+          <h2 class="bleuOpaque"> Structure de base </h2>
     
-      <p> On écrit un document HTML dans un éditeur de texte classique.
-        Il permet de présenter de manière sémantique les données de type texte, image ou vidéos et il est structuré par des balises. </p>
-      <p> Une balise est présentée entre chevrons : &lt;balise&gt;
-        Il existe deux formes de balises : </p>
-      <ul> 
-        <li> la forme complète qui s'écrit : &lt;balise&gt; du texte et d'autres balises imbriquées (les "enfants") &lt;/balise&gt; </li>
-        <li>la forme auto-fermante qui s'écrit &lt;balise/&gt; </li>
-      </ul>
-    </section>
-
-    <section id="structureHtml">
-      <h2 class="bleuOpaque"> Structure de base </h2>
-    
-      <p> La structure minimale d'un document HTML est de la forme suivante : </p>
-      <pre> 
-        &lt;! doctype html&gt;                           &lt;!--cette ligne précise quel langage HTML est utilisé (HTML5 ici)--!&gt;
+          <p> La structure minimale d'un document HTML est de la forme suivante : </p>
+          <pre> 
+            &lt;! doctype html&gt;                           &lt;!--cette ligne précise quel langage HTML est utilisé (HTML5 ici)--!&gt;
       
-        &lt;html&gt;                                     &lt;!--pour commencer le document--!&gt;
+            &lt;html&gt;                                     &lt;!--pour commencer le document--!&gt;
       
-          &lt;head&gt;                                   &lt;!--l'en-tête du document--!&gt;
-            &lt;meta charset="utf-8" /&gt;               &lt;!--pour choisir le code d encodage UTF8--!&gt;
-            &lt;title&gt; Un titre &lt;/title&gt;        &lt;!--il faut absolument un titre !--!&gt;
-          &lt;/head&gt;
+              &lt;head&gt;                                   &lt;!--l'en-tête du document--!&gt;
+                &lt;meta charset="utf-8" /&gt;               &lt;!--pour choisir le code d encodage UTF8--!&gt;
+                &lt;title&gt; Un titre &lt;/title&gt;        &lt;!--il faut absolument un titre !--!&gt;
+              &lt;/head&gt;
         
-          &lt;body&gt;                                   &lt;!--et le corps du document--!&gt;
-          &lt;/body&gt;
+              &lt;body&gt;                                   &lt;!--et le corps du document--!&gt;
+              &lt;/body&gt;
       
-        &lt;/html&gt;           
-      </pre> 
-    </section>
+            &lt;/html&gt;           
+          </pre> 
+        </section>
     
 
-    <section id="docHtml">
-      <h2 class="bleuOpaque"> Le corps du document </h2>
+        <section id="docHtml">
+          <h2 class="bleuOpaque"> Le corps du document </h2>
     
-      <p> Pour structurer la page web on peut ajouter entre les balises &lt;body&gt; et &lt;/body&gt; plusieurs éléments : </p>
-      <ul> 
-        <li> des titres </li>
-        <li> des paragraphes de texte </li>
-        <li> la mise en valeur du texte </li>
-        <li> des listes </li>
-      </ul>
+          <p> Pour structurer la page web on peut ajouter entre les balises &lt;body&gt; et &lt;/body&gt; plusieurs éléments : </p>
+          <ul> 
+            <li> des titres </li>
+            <li> des paragraphes de texte </li>
+            <li> la mise en valeur du texte </li>
+            <li> des listes </li>
+          </ul>
 
-      <h3> Les titres </h3>
-      <p> Les titres doivent être écrits entre les balises de type &lt;h<em>n</em>&gt; où <em>n</em> est un chiffre compris entre 1 et 6 inclus. 
-        Ce chiffre indique le niveau d'imbrication du titre. On distingue ainsi : </p>
-      <ul> 
-        <li> &lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;  </li>
-        <li> &lt;h2&gt; Titre de niveau 2 &lt;/h2&gt;  </li>
-        <li> &lt;h3&gt; Titre de niveau 3 &lt;/h3&gt;  </li>
-        <li> &lt;h4&gt; Titre de niveau 4 &lt;/h4&gt;  </li>
-        <li> &lt;h5&gt; Titre de niveau 5 &lt;/h5&gt;  </li>
-        <li> &lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;  </li>
-      </ul>
-      <p>Il peut y avoir plusieurs titres de niveau inférieur après un titre de niveau supérieur. Par exemple, on peut insérer deux titres de niveau 2 suite à un titre de niveau 1. 
-        Par contre, il faut veiller à conserver l'ordre d'imbrication des titres et ne pas insérer un titre de niveau 2 avant un titre de niveau 1 par exemple.</p>
+          <h3> Les titres </h3>
+          <p> Les titres doivent être écrits entre les balises de type &lt;h<em>n</em>&gt; où <em>n</em> est un chiffre compris entre 1 et 6 inclus. 
+            Ce chiffre indique le niveau d'imbrication du titre. On distingue ainsi : </p>
+          <ul> 
+            <li> &lt;h1&gt; Titre de niveau 1 &lt;/h1&gt;  </li>
+            <li> &lt;h2&gt; Titre de niveau 2 &lt;/h2&gt;  </li>
+            <li> &lt;h3&gt; Titre de niveau 3 &lt;/h3&gt;  </li>
+            <li> &lt;h4&gt; Titre de niveau 4 &lt;/h4&gt;  </li>
+            <li> &lt;h5&gt; Titre de niveau 5 &lt;/h5&gt;  </li>
+            <li> &lt;h6&gt; Titre de niveau 6 &lt;/h6&gt;  </li>
+          </ul>
+          <p>Il peut y avoir plusieurs titres de niveau inférieur après un titre de niveau supérieur. Par exemple, on peut insérer deux titres de niveau 2 suite à un titre de niveau 1. 
+            Par contre, il faut veiller à conserver l'ordre d'imbrication des titres et ne pas insérer un titre de niveau 2 avant un titre de niveau 1 par exemple.</p>
 
-      <h3> Les paragraphes </h3>
+          <h3> Les paragraphes </h3>
       
-      <p> Il est très facile d'insérer un paragraphe dans une page web en utilsant les balises &lt;p&gt; et &lt;/p&gt; Par exemple on note : </p>
-      <pre>
-        &lt;p&gt; On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire &lt;/p&gt;
-        &lt;p&gt; Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! &lt;/p&gt;
-      </pre>
-      <p> et on obtient : </p>
-      <p> On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire </p> 
-      <p> Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! </p> 
+          <p> Il est très facile d'insérer un paragraphe dans une page web en utilsant les balises &lt;p&gt; et &lt;/p&gt; Par exemple on note : </p>
+          <pre>
+            &lt;p&gt; On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire &lt;/p&gt;
+            &lt;p&gt; Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! &lt;/p&gt;
+          </pre>
+          <p> et on obtient : </p>
+          <p> On écrit un premier paragraphe juste pour l'exemple même si on n'a pas grand chose à dire </p> 
+          <p> Et on rajoute un second paragraphe dans lequel on ne raconte toujours rien d'intéressant ! </p> 
     
-      <h3> La mise en valeur </h3>
+          <h3> La mise en valeur </h3>
     
-      <p> Il se peut que vous ayez besoin de mettre en valeur certains mots, phrases ou paragraphes pour la compréhension sémantique de votre contenu.
-        Dans ce cas vous pouvez utiliser trois balises &lt;mark&gt; &lt;/mark&gt;, &lt;em&gt; &lt;/em&gt; et &lt;strong&gt; &lt;/strong&gt;. Voici un exemple d'utilisation : </p>
-      <pre>
-        &lt;p&gt; Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
-        on a d'abord un mot &lt;mark&gt; important &lt;/mark&gt;, 
-        puis un mot &lt;em&gt; très important &lt;/em&gt; , 
-        et enfin un mot  &lt;strong&gt; très très important ! &lt;/strong&gt; 
-        &lt;p&gt;
-      </pre>
-      <p>On obtient :</p>
-      <p> Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : on a d'abord un mot <mark> important </mark>;, 
-        puis un mot <em> très important </em>; et enfin un mot <strong> très très important ! </strong> </p>
+          <p> Il se peut que vous ayez besoin de mettre en valeur certains mots, phrases ou paragraphes pour la compréhension sémantique de votre contenu.
+            Dans ce cas vous pouvez utiliser trois balises &lt;mark&gt; &lt;/mark&gt;, &lt;em&gt; &lt;/em&gt; et &lt;strong&gt; &lt;/strong&gt;. Voici un exemple d'utilisation : </p>
+          <pre>
+            &lt;p&gt; Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : 
+            on a d'abord un mot &lt;mark&gt; important &lt;/mark&gt;, 
+            puis un mot &lt;em&gt; très important &lt;/em&gt; , 
+            et enfin un mot  &lt;strong&gt; très très important ! &lt;/strong&gt; 
+            &lt;p&gt;
+          </pre>
+          <p>On obtient :</p>
+          <p> Voici un paragraphe dans lequel il y a des mots importants que l'on veut mettre en évidence : on a d'abord un mot <mark> important </mark>;, 
+            puis un mot <em> très important </em>; et enfin un mot <strong> très très important ! </strong> </p>
 
 
-      <h3> Les listes </h3>
-      <p> On distingue les listes ordonnées, les listes désordonnées et les listes de définitions.</p>
+          <h3> Les listes </h3>
+          <p> On distingue les listes ordonnées, les listes désordonnées et les listes de définitions.</p>
 
-      <h4> Les listes ordonnées </h4>
-      <p> Elles permettent de présenter des éléments qui sont numérotés. Elles doivent être décrites entre les balises &lt;ol&gt; et &lt;/ol&gt; 
-        et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
-      <p>Voici un exemple : </p>
-      <pre>  
-        &lt;ol&gt; 
-          &lt;li&gt; ligne 1 &lt;/li&gt;
-          &lt;li&gt; ligne 2 &lt;/li&gt;
-          &lt;li&gt; ligne 3 &lt;/li&gt;
-        &lt;/ol&gt;
-      </pre>
-      <p>On obtient:</p>
-      <ol> 
-        <li> ligne 1 </li>
-        <li> ligne 2 </li>
-        <li> ligne 3 </li>
-      </ol>
+          <h4> Les listes ordonnées </h4>
+          <p> Elles permettent de présenter des éléments qui sont numérotés. Elles doivent être décrites entre les balises &lt;ol&gt; et &lt;/ol&gt; 
+            et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
+          <p>Voici un exemple : </p>
+          <pre>  
+            &lt;ol&gt; 
+              &lt;li&gt; ligne 1 &lt;/li&gt;
+              &lt;li&gt; ligne 2 &lt;/li&gt;
+              &lt;li&gt; ligne 3 &lt;/li&gt;
+            &lt;/ol&gt;
+          </pre>
+          <p>On obtient:</p>
+          <ol> 
+            <li> ligne 1 </li>
+            <li> ligne 2 </li>
+            <li> ligne 3 </li>
+          </ol>
     
 
-      <h4> Les listes désordonnées </h4>
-      <p> Elles permettent de présenter des éléments avec des puces. Elles doivent être décrites entre les balises &lt;ul&gt; et &lt;/ul&gt; 
-        et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
-      <p> Voici un exemple : </p>
-      <pre>     
-        &lt;ul&gt; 
-          &lt;li&gt; une ligne &lt;/li&gt;
-          &lt;li&gt; une autre ligne &lt;/li&gt;
-          &lt;li&gt; et encore une &lt;/li&gt;
-        &lt;/ul&gt;
-      </pre>
-      <p>On obtient:</p>
-      <ul> 
-        <li> une ligne </li>
-        <li> une autre ligne </li>
-        <li> et encore une </li>
-      </ul>
+          <h4> Les listes désordonnées </h4>
+          <p> Elles permettent de présenter des éléments avec des puces. Elles doivent être décrites entre les balises &lt;ul&gt; et &lt;/ul&gt; 
+            et chaque élément listé doit être indiqué entre les balises &lt;li&gt; et &lt;/li&gt;.</p>
+          <p> Voici un exemple : </p>
+          <pre>     
+            &lt;ul&gt; 
+              &lt;li&gt; une ligne &lt;/li&gt;
+              &lt;li&gt; une autre ligne &lt;/li&gt;
+              &lt;li&gt; et encore une &lt;/li&gt;
+            &lt;/ul&gt;
+          </pre>
+          <p>On obtient:</p>
+          <ul> 
+            <li> une ligne </li>
+            <li> une autre ligne </li>
+            <li> et encore une </li>
+          </ul>
     
-      <h4> Les listes de définition </h4>
-      <p> Les listes de définition, comme leur nom l'indique, permettent de présenter des termes et leur(s) définition(s). Elles doivent être décrites entre les balises &lt;dl&gt; et &lt;/dl&gt; ,
-        chaque terme listé doit être indiqué entre les balises &lt;dt&gt; et &lt;/dt&gt; et les définitions entre les balises &lt;dd&gt; et &lt;/dd&gt;. 
-        Il peut y avoir plusieurs termes pour une définition et/ou plusieurs définitions pour un terme. </p>
-      <p> Voici un exemple : </p>
-      <pre>     
-        &lt;dl&gt;
-          &lt;dt&gt; un terme &lt;/dt&gt;
-          &lt;dd&gt; une definition &lt;/dd&gt;
-          &lt;dd&gt; et une autre definition pour le même terme &lt;/dd&gt;
-          &lt;dt&gt; un deuxieme terme &lt;/dt&gt;
-          &lt;dd&gt; et une deuxieme definition &lt;dd&gt;
-        &lt;/dl&gt;
-      </pre>
-      <p> On obtient: </p>
-      <dl>
-        <dt> un terme </dt>
-        <dd> une definition </dd>
-        <dd> et une autre definition pour le même terme </dd>
-        <dt> un deuxieme terme </dt>
-        <dd> et une deuxieme definition <dd>
-      </dl>
-    </section>
+          <h4> Les listes de définition </h4>
+          <p> Les listes de définition, comme leur nom l'indique, permettent de présenter des termes et leur(s) définition(s). Elles doivent être décrites entre les balises &lt;dl&gt; et &lt;/dl&gt; ,
+            chaque terme listé doit être indiqué entre les balises &lt;dt&gt; et &lt;/dt&gt; et les définitions entre les balises &lt;dd&gt; et &lt;/dd&gt;. 
+            Il peut y avoir plusieurs termes pour une définition et/ou plusieurs définitions pour un terme. </p>
+          <p> Voici un exemple : </p>
+          <pre>     
+            &lt;dl&gt;
+              &lt;dt&gt; un terme &lt;/dt&gt;
+              &lt;dd&gt; une definition &lt;/dd&gt;
+              &lt;dd&gt; et une autre definition pour le même terme &lt;/dd&gt;
+              &lt;dt&gt; un deuxieme terme &lt;/dt&gt;
+              &lt;dd&gt; et une deuxieme definition &lt;dd&gt;
+            &lt;/dl&gt;
+          </pre>
+          <p> On obtient: </p>
+          <dl>
+            <dt> un terme </dt>
+            <dd> une definition </dd>
+            <dd> et une autre definition pour le même terme </dd>
+            <dt> un deuxieme terme </dt>
+            <dd> et une deuxieme definition <dd>
+          </dl>
+        </section>
 
-    <section id="organisationHtml">
-      <h2 class="bleuOpaque"> Organisation de votre document </h2>
-      <p> Il existe certaines balises qui permettent de distinguer clairement votre contenu d'informations annexes utiles mais non indispensables à la compréhension sémantique de votre discours.
-        Ces informations annexes sont généralement affichées sur votre page web dans différents espaces dédiés. On distingue ainsi : </p>
-      <ul>
-        <li> L'en-tête dont le contenu sera décrit dans le document html entre les balises &lt;header&gt; et &lt;/header&gt; </li>
-        <li> Le pied de page dont le contenu sera décrit dans le document html entre les balises &lt;footer&gt; et &lt;/footer&gt; </li>
-        <li> L'espace de navigation qui permet d'accéder rapidement à d'autres parties du site internet et dont le contenu sera décrit dans le document html entre les balises &lt;nav&gt; et &lt;/nav&gt; </li>
-        <li> Un espace latéral qui permet d'insérer notamment des publicités dont le contenu sera décrit dans le document html entre les balises &lt;aside&gt; et &lt;/aside&gt; </li>
-      </ul>
-    </section>
+        <section id="organisationHtml">
+          <h2 class="bleuOpaque"> Organisation de votre document </h2>
+          <p> Il existe certaines balises qui permettent de distinguer clairement votre contenu d'informations annexes utiles mais non indispensables à la compréhension sémantique de votre discours.
+            Ces informations annexes sont généralement affichées sur votre page web dans différents espaces dédiés. On distingue ainsi : </p>
+          <ul>
+            <li> L'en-tête dont le contenu sera décrit dans le document html entre les balises &lt;header&gt; et &lt;/header&gt; </li>
+            <li> Le pied de page dont le contenu sera décrit dans le document html entre les balises &lt;footer&gt; et &lt;/footer&gt; </li>
+            <li> L'espace de navigation qui permet d'accéder rapidement à d'autres parties du site internet et dont le contenu sera décrit dans le document html entre les balises &lt;nav&gt; et &lt;/nav&gt; </li>
+            <li> Un espace latéral qui permet d'insérer notamment des publicités dont le contenu sera décrit dans le document html entre les balises &lt;aside&gt; et &lt;/aside&gt; </li>
+          </ul>
+        </section>
 
-    <section id="liensHtml">
-      <h2 class="bleuOpaque"> Les liens HyperText </h2>
-      <p> Les liens hypertext permettent de lire un document (en l'occurence notre page web) de manière non-linéaire. On peut faire des liens vers un autre site web, une autre page du même site ou vers une section ou un article de la page. 
-        Il faut indiquer le lien de la façon suivante &lt;a href="adresseDeLaPageALier"&gt; le texte sur lequel il faudra cliquer &lt;/a&gt;. 
-        Il faut eviter les accents et les espaces dans l'adresse de la page. Voyons un exemple pour vous diriger vers un site très sérieux.  </p>
-      <pre>     
-        &lt;a href="https://romaing44.github.io/essaie_page.html"&gt; Si vous aimez les chats ET les sabres lasers... &lt;/a&gt;
-      </pre>
-      <p> Ce qui donne :</p>
-      <p> <a href="https://romaing44.github.io/essaie_page.html"> Si vous aimez les chats ET les sabres lasers... </a>
-      <p> Pour indiquer où afficher la ressource liée, on peut utiliser l'attribut "target" associé à l'un des mots-clés suivants :</p>
-      <ul>
-        <li> "_self" : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné. </li>
-        <li> "_blank" : charge la réponse dans un nouveau contexte de navigation. </li>
-        <li> "_parent" : charge la réponse dans le contexte de navigation de plus haut niveau 
-            (c'est à dire, le contexte de navigation parent par rapport à l'actuel, et qui n'a lui-même aucun parent). 
-            S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
-      </ul>
-      <p> Par exemple, on peut ouvrir le site mentionné précédemment dans un nouvel onglet grâce à la commande &lt;a href="https://romaing44.github.io/essaie_page.html" target="_blank"&gt; Pour revoir à l'infini ce chef d'oeuvre !&lt;/a&gt;</p>
+        <section id="liensHtml">
+          <h2 class="bleuOpaque"> Les liens HyperText </h2>
+          <p> Les liens hypertext permettent de lire un document (en l'occurence notre page web) de manière non-linéaire. On peut faire des liens vers un autre site web, une autre page du même site ou vers une section ou un article de la page. 
+            Il faut indiquer le lien de la façon suivante &lt;a href="adresseDeLaPageALier"&gt; le texte sur lequel il faudra cliquer &lt;/a&gt;. 
+            Il faut eviter les accents et les espaces dans l'adresse de la page. Voyons un exemple pour vous diriger vers un site très sérieux.  </p>
+          <pre>     
+            &lt;a href="https://romaing44.github.io/essaie_page.html"&gt; Si vous aimez les chats ET les sabres lasers... &lt;/a&gt;
+          </pre>
+          <p> Ce qui donne :</p>
+          <p> <a href="https://romaing44.github.io/essaie_page.html"> Si vous aimez les chats ET les sabres lasers... </a>
+          <p> Pour indiquer où afficher la ressource liée, on peut utiliser l'attribut "target" associé à l'un des mots-clés suivants :</p>
+          <ul>
+            <li> "_self" : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné. </li>
+            <li> "_blank" : charge la réponse dans un nouveau contexte de navigation. </li>
+            <li> "_parent" : charge la réponse dans le contexte de navigation de plus haut niveau 
+                (c'est à dire, le contexte de navigation parent par rapport à l'actuel, et qui n'a lui-même aucun parent). 
+                S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
+          </ul>
+          <p> Par exemple, on peut ouvrir le site mentionné précédemment dans un nouvel onglet grâce à la commande &lt;a href="https://romaing44.github.io/essaie_page.html" target="_blank"&gt; Pour revoir à l'infini ce chef d'oeuvre !&lt;/a&gt;</p>
       
-      <p> On peut faire des liens vers une autre page de notre site web en indiquant tout simplement le nom du fichier html associé. 
-        Eventuellement, si la page est rangée dans un autre sous-dossier, on rajoute dans le href l'adresse relative du fichier visé.</p>
-      <p> Enfin, si on veut faire un lien vers une section ou un article dans la même page, il faut d'abord lui attribuer un identifiant.
-        Par exemple, pour renvoyer à l'introduction de cette page, on l'insère dans un section très originalement intitulée introHTML grâce 
-        à la balise &lt;section id="introHtml"&gt; notre introduction blabla &lt;/section&gt;. L'identifiant doit être sans accent et sans espace pour éviter les erreurs.
-        On propose ensuite au lecteur de cliquer &lt;a href="#introHtml"&gt; sur le texte de notre choix &lt;/a&gt; pour y accéder, par exemple en cliquant <a href="#introHtml"> ici </a>. </p>
-    </section>
+          <p> On peut faire des liens vers une autre page de notre site web en indiquant tout simplement le nom du fichier html associé. 
+            Eventuellement, si la page est rangée dans un autre sous-dossier, on rajoute dans le href l'adresse relative du fichier visé.</p>
+          <p> Enfin, si on veut faire un lien vers une section ou un article dans la même page, il faut d'abord lui attribuer un identifiant.
+            Par exemple, pour renvoyer à l'introduction de cette page, on l'insère dans un section très originalement intitulée introHTML grâce 
+            à la balise &lt;section id="introHtml"&gt; notre introduction blabla &lt;/section&gt;. L'identifiant doit être sans accent et sans espace pour éviter les erreurs.
+            On propose ensuite au lecteur de cliquer &lt;a href="#introHtml"&gt; sur le texte de notre choix &lt;/a&gt; pour y accéder, par exemple en cliquant <a href="#introHtml"> ici </a>. </p>
+        </section>
 
-    <section id="imagesHtml">
-      <h2 class="bleuOpaque"> Insérer une image </h2>
-      <p> Peut-être qu'à un moment donné vous aurez une envie irrésistible d'ajouter une photo de chat dans votre site web. Dans ce cas, rien de plus simple !
-        Il vous suffit d'enregistrer votre image dans le dossier de votre site web sur votre ordinateur, puis d'insérer cette image grâce à la balise 
-        &lt;img src="adresseDeLImage" alt="DuTexte"&gt;. Pour l'attibut "src" il faut renseigner le nom (et l'adresse relative si nécessaire) de l'image (sans espace et sans accents si possible)
-        et pour l'attribut "alt" il faut ajouter un texte au cas où l'image ne s'afficherait pas.</p>
-      <p> Personnellement je n'ai pas une passion dévorante pour les chats mais j'aime beaucoup les cailloux alors j'ai choisi une superbe image d'éclogite (oui oui !)
-        que je vous affiche grâce à la commande &lt;img src="eclogite.jpg" alt="Dommage pour vous, l'image ne s'affiche pas"&gt;</p>
-      <p> La voici : </p>
-      <img src="eclogite.jpg" alt="Dommage pour vous, l'image ne s'affiche pas">
-      <p>PS : si vous ne savez pas ce qu'est une éclogite, je vous invite à combler ce manque rapidement. Ceci est tout aussi indispensable que de savoir écrire du HTML5 ! </p>
-    </section>
+        <section id="imagesHtml">
+          <h2 class="bleuOpaque"> Insérer une image </h2>
+          <p> Peut-être qu'à un moment donné vous aurez une envie irrésistible d'ajouter une photo de chat dans votre site web. Dans ce cas, rien de plus simple !
+            Il vous suffit d'enregistrer votre image dans le dossier de votre site web sur votre ordinateur, puis d'insérer cette image grâce à la balise 
+            &lt;img src="adresseDeLImage" alt="DuTexte"&gt;. Pour l'attibut "src" il faut renseigner le nom (et l'adresse relative si nécessaire) de l'image (sans espace et sans accents si possible)
+            et pour l'attribut "alt" il faut ajouter un texte au cas où l'image ne s'afficherait pas.</p>
+          <p> Personnellement je n'ai pas une passion dévorante pour les chats mais j'aime beaucoup les cailloux alors j'ai choisi une superbe image d'éclogite (oui oui !)
+            que je vous affiche grâce à la commande &lt;img src="eclogite.jpg" alt="Dommage pour vous, l'image ne s'affiche pas"&gt;</p>
+          <p> La voici : </p>
+          <img src="eclogite.jpg" alt="Dommage pour vous, l'image ne s'affiche pas">
+          <p>PS : si vous ne savez pas ce qu'est une éclogite, je vous invite à combler ce manque rapidement. Ceci est tout aussi indispensable que de savoir écrire du HTML5 ! </p>
+        </section>
 
-    <section id="tableauxHtml">
-      <h2 class="bleuOpaque"> Les tableaux </h2>
-      <p> Un tableau en HTML est défini par un ensemble de lignes qui contiennent des cellules. La notion de colonne n'existe pas. Chaque ligne peut donc avoir un nombre différent de cellules.
-        Le tableau doit être insérer entre les balises &lt;table&gt; et &lt;/table&gt;. Entre ces balises on intègre chaque ligne entre les balises &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;td&gt; et &lt;/td&gt;  </p>
-      <p> Par exemple, pour insérer un tableau ayant deux lignes contenant chacune 2 cellules, avec A et B dans la première ligne et C et D dans la seconde ligne, on écrit : </p>
-      <pre>     
-        &lt;table&gt; 
-          &lt;tr&gt; 
-            &lt;td&gt; A &lt;/td&gt;
-            &lt;td&gt; B &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt; 
-            &lt;td&gt; C &lt;/td&gt;
-            &lt;td&gt; D &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/table&gt; 
-      </pre>
-      <p> On obtient : </p>
-      <table> 
-        <tr>  
-          <td> A </td>
-          <td> B </td>
-        </tr>
-        <tr> 
-          <td> C </td>
-          <td> D </td>
-        </tr>
-      </table> 
+        <section id="tableauxHtml">
+          <h2 class="bleuOpaque"> Les tableaux </h2>
+          <p> Un tableau en HTML est défini par un ensemble de lignes qui contiennent des cellules. La notion de colonne n'existe pas. Chaque ligne peut donc avoir un nombre différent de cellules.
+            Le tableau doit être insérer entre les balises &lt;table&gt; et &lt;/table&gt;. Entre ces balises on intègre chaque ligne entre les balises &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;td&gt; et &lt;/td&gt;  </p>
+          <p> Par exemple, pour insérer un tableau ayant deux lignes contenant chacune 2 cellules, avec A et B dans la première ligne et C et D dans la seconde ligne, on écrit : </p>
+          <pre>     
+            &lt;table&gt; 
+              &lt;tr&gt; 
+                &lt;td&gt; A &lt;/td&gt;
+                &lt;td&gt; B &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td&gt; C &lt;/td&gt;
+                &lt;td&gt; D &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt; 
+          </pre>
+          <p> On obtient : </p>
+          <table> 
+            <tr>  
+              <td> A </td>
+              <td> B </td>
+            </tr>
+            <tr> 
+              <td> C </td>
+              <td> D </td>
+            </tr>
+          </table> 
 
-      <p> Pour faire un tableau un peu plus complexe (à l'écriture mais qui facilitera la lecture bien  sûr !), on peut y ajouter une en-tête et/ou un pied de tableau.
-        L'entête et le pied s'insèrent entre les balises du tableau et sont marqués par les balises &lt;thead&gt; &lt;/thead&gt; pour l'en-tête et &lt;tfoot&gt; &lt;/tfoot&gt; pour le pied. 
-        Chaque ligne de l'en-tête et du pied doivent être intégrées entre les balises  &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;th&gt; et &lt;/th&gt;.
-        En général, on écrit l'en-tête et le pied au début dans le code mais ils s'afficheront effectivement à leur place sur la page web, à savoir en haut et en bas du tableau.</p>
-      <p> Voici l'écriture du tableau précédent avec en plus, une en-tête et un pied de tableau </p>
-      <pre>     
-        &lt;table&gt; 
-          &lt;thead&gt;                                &lt;!--en-tête--!&gt; 
-            &lt;tr&gt;  
-              &lt;th&gt; Nom &lt;/th&gt;        
-              &lt;th&gt; Prenom &lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tfoot&gt;                                &lt;!--pied--!&gt;  
-            &lt;tr&gt;
-             &lt;th&gt; Fin &lt;/th&gt;
-             &lt;th&gt; Fin &lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/tfoot&gt;
-          &lt;tr&gt;                                   &lt;!--corps--!&gt;   
-            &lt;td&gt; A &lt;/td&gt;
-            &lt;td&gt; B &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt; 
-            &lt;td&gt; C &lt;/td&gt;
-            &lt;td&gt; D &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/table&gt; 
-      </pre>
-      <p> On obtient : </p>
-      <table>  
-        <thead> 
-          <tr>
-            <th> Entête1 </th>        
-            <th> Entête2 </th>
-          </tr>
-        </thead>
-        <tfoot>  
-          <tr>
-            <th> Pied1 <th>
-            <th> Pied2 </th>
-          </tr>
-        </tfoot>
-        <tr>  
-          <td> A </td>
-          <td> B </td>
-        </tr>
-        <tr> 
-          <td> C </td>
-          <td> D </td>
-        </tr>
-      </table> 
+          <p> Pour faire un tableau un peu plus complexe (à l'écriture mais qui facilitera la lecture bien  sûr !), on peut y ajouter une en-tête et/ou un pied de tableau.
+            L'entête et le pied s'insèrent entre les balises du tableau et sont marqués par les balises &lt;thead&gt; &lt;/thead&gt; pour l'en-tête et &lt;tfoot&gt; &lt;/tfoot&gt; pour le pied. 
+            Chaque ligne de l'en-tête et du pied doivent être intégrées entre les balises  &lt;tr&gt; et &lt;/tr&gt; et chaque cellule entre &lt;th&gt; et &lt;/th&gt;.
+            En général, on écrit l'en-tête et le pied au début dans le code mais ils s'afficheront effectivement à leur place sur la page web, à savoir en haut et en bas du tableau.</p>
+          <p> Voici l'écriture du tableau précédent avec en plus, une en-tête et un pied de tableau </p>
+          <pre>     
+            &lt;table&gt; 
+              &lt;thead&gt;                                &lt;!--en-tête--!&gt; 
+                &lt;tr&gt;  
+                  &lt;th&gt; Nom &lt;/th&gt;        
+                  &lt;th&gt; Prenom &lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tfoot&gt;                                &lt;!--pied--!&gt;  
+                &lt;tr&gt;
+                 &lt;th&gt; Fin &lt;/th&gt;
+                 &lt;th&gt; Fin &lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/tfoot&gt;
+               &lt;tr&gt;                                   &lt;!--corps--!&gt;   
+                &lt;td&gt; A &lt;/td&gt;
+                &lt;td&gt; B &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td&gt; C &lt;/td&gt;
+                &lt;td&gt; D &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt; 
+          </pre>
+          <p> On obtient : </p>
+          <table>  
+            <thead> 
+              <tr>
+                <th> Entête1 </th>        
+                <th> Entête2 </th>
+              </tr>
+            </thead>
+            <tfoot>  
+              <tr>
+                <th> Pied1 <th>
+                <th> Pied2 </th>
+              </tr>
+            </tfoot>
+            <tr>  
+              <td> A </td>
+              <td> B </td>
+            </tr>
+            <tr> 
+              <td> C </td>
+              <td> D </td>
+            </tr>
+          </table> 
 
-      <p> On peut aussi créer des cellules plus grandes que celles définies dans le tableau à la base. 
-        Par exemple, on peut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même ligne. On rajoute alors un attribut à &lt;th&gt; ou &lt;td&gt; 
-       (selon si on se trouve dans l'en-tête, le pied ou le corps du tableau) et on écrit le contenu de la cellule entre les balises &lt;th rowspan <em>n</em>&gt; &lt;/th&gt; 
-        ou &lt;td rowspan <em>n</em>&gt; &lt;/td&gt;. Si on veut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même "colonne" 
-        on écrit le contenu de la cellule entre les balises &lt;th colspan <em>n</em>&gt; &lt;/th&gt; ou &lt;td colspan <em>n</em>&gt; &lt;/td&gt;. </p>
-      <p> Comme on n'est pas des sauvages, on va aussi rajouter une légende à notre tableau entre les balises &lt;caption&gt; et &lt;/caption&gt;. 
-        Attention ! Il faut impérativement insérer les balises "captions" juste après la balise "table" sinon vous aurez à faire à un bugg pas sympa du tout !</p>
+          <p> On peut aussi créer des cellules plus grandes que celles définies dans le tableau à la base. 
+            Par exemple, on peut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même ligne. On rajoute alors un attribut à &lt;th&gt; ou &lt;td&gt; 
+           (selon si on se trouve dans l'en-tête, le pied ou le corps du tableau) et on écrit le contenu de la cellule entre les balises &lt;th rowspan <em>n</em>&gt; &lt;/th&gt; 
+            ou &lt;td rowspan <em>n</em>&gt; &lt;/td&gt;. Si on veut créer une cellule qui va prendre la place de <em>n</em> cellules sur une même "colonne" 
+            on écrit le contenu de la cellule entre les balises &lt;th colspan <em>n</em>&gt; &lt;/th&gt; ou &lt;td colspan <em>n</em>&gt; &lt;/td&gt;. </p>
+          <p> Comme on n'est pas des sauvages, on va aussi rajouter une légende à notre tableau entre les balises &lt;caption&gt; et &lt;/caption&gt;. 
+            Attention ! Il faut impérativement insérer les balises "captions" juste après la balise "table" sinon vous aurez à faire à un bugg pas sympa du tout !</p>
 
-    </section>
-
-
-
-    <a href="index.html"> Retour vers la page principale </a>   
-    </div>
+        </section>
+ 
+      </div>
 
     </div>
 
