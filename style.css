@@ -8,10 +8,6 @@
   justify-content: space-around;
 }
 
-.nav {
-  flex-basis: 0;
-}
-
 .contenu {
   flex-basis: 0;
 }
