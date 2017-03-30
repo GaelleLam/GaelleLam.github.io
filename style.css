@@ -13,8 +13,7 @@
 }
 
 .contenu {
-  /*width: 10em;*/
-  display: inline-block;
+  width: 100em;
 }
 
 .rouge {
