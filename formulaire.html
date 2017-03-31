@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" /> <!--pour choisir le code d encodage-->
+    <title> HTML et CSS débutant </title>
+  </head>
+  <body>
+
+    <form action="" method="post">
+      <label for="name"> Nom: </label>
+      <input type="text" name="user-name" id="name" required />
+
+      <label for="mail"> Mail: </label>
+      <input type="mail" name="user-mail" id="mail"/>
+
+      <label for="commentaires"> Commentaires: </label>
+      <textarea name="user-comment" id="commentaires"> </textarea>
+
+      <button type="submit"> Envoyer </button>
+      <button type="reset"> Réinitialiser le formulaire </button>
+
+      <label for="checkbox"> Cochez: </label>
+      <input type="checkbox" name="user-check" id="checkbox"/>
+
+
+      <fieldset>
+      <legend> Un groupe de puces </legend>
+      <label for="radio1"> 1: </label>
+      <input type="radio" name="user-check" id="radio1" value="valeur1"/>
+      <label for="radio2"> 2: </label>
+      <input type="radio" name="user-check" id="radio2" value="valeur2"/>
+      </fieldset>
+
+      <label for="select1"> Selectionnez: </label>
+      <select name="select1" id="select1">
+        <optgroup label="groupe1">
+          <option value="1"> choix n°1 </option>
+          <option value="2"> choix n°2 </option>
+        </optgroup>
+        <option value="3"> choix n°3 </option>
+        <option value="4"> choix n°4 </option>
+      </select>
+
+      <label for="select2"> Selectionnez: </label>
+      <select name="select2" id="select2" multiple>
+        <option value="1"> choix n°1 </option>
+        <option value="2"> choix n°2 </option>
+      </select>
+
+      <input type="date"/>
+
+    </form>
+
+	</body>
+</html>

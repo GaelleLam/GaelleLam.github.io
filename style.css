@@ -35,6 +35,24 @@
   background-color: rgba(70,130,180,0.8);
 }
 
+.jaune {
+  background-color: Gold;
+}
+.jaune:hover{
+  background-color: Green;
+}
+
+.jaune1 {
+  background-color: Gold;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.jaune1:hover{
+  background-color: Green;
+  height: 300px;
+  width: 300px;
+  transform: rotate(180deg);
+}
+
 td {
  border: 1px double black; /* auront une bordure de 1px */
  text-align : center;
@@ -45,3 +63,22 @@ th {
  border: 2px double red; /* auront une bordure de 1px */
  empty-cells: hide, show;
 }
+
+.carre {
+  height: 150px;
+  width: 150px;
+}
+
+.balise {
+ color: IndianRed;
+}
+
+.attribut {
+ color: DeepPink;
+}
+
+.anime {
+ animation: 4s linear 0s infinite anime;
+}
+
+@keyframes anime{from {margin-left:0%;} to {margin-left:100%;}}

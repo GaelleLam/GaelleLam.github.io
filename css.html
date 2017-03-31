@@ -27,6 +27,7 @@
               <li> <a href="#positionCSS"> Le positionnement </a> </li>
               <li> <a href="#selecteursCSS"> Les selecteurs </a> </li>
               <li> <a href="#flexboxCSS"> Flexbox ! </a> </li>
+              <li> <a href="#pseudoCSS">Les gadgets </a> </li>
             </ul>
           </li> 
         </ul>
@@ -39,9 +40,11 @@
             grâce au HTML. On travaille la mise en page grâce à une imbrication de "boites" qui contiennent les différents éléments à organiser
             Il existe deux types de boites :</p>
           <ul>
-            <li> les boites "in line" qui s'introduisent grâce à la balise &lt;span&gt;. Elles permettent de mettre en forme des éléments qui se trouvent dans une ligne.</li>
-            <li> les boites "block" qui s'introduisent grâce à la balise &lt;div&gt;. Elles permettent de mettre en forme des éléments qui sont regroupés dans un bloc. </li>
+            <li> les boites "in line" qui s'introduisent grâce à la balise <span class="balise">&lt;span&gt;</span>. Elles permettent de mettre en forme des éléments qui se trouvent dans une ligne.</li>
+            <li> les boites "block" qui s'introduisent grâce à la balise <span class="balise">&lt;div&gt;</span>. Elles permettent de mettre en forme des éléments qui sont regroupés dans un bloc. </li>
           </ul>
+
+          <a href="https://developer.mozilla.org/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS" class="jaune"> Vous trouverez beaucoup d'infos sur le CSS ici </a>
 
         </section>
 
@@ -54,7 +57,7 @@
             mêmes teintes que nos carrés sans avaoir à les redéfinir, super non ?!? </p>
           <p> Pour cela, le plus simple est de créer un fichier qui répertorie les caractéristiques de toutes les classes définies. Ce fichier
             doit avoir une extension ".css". On va par exemple l'appeler "style.css". Pour que le lien se fasse avec notre fichier html, il faut
-            l'appeler dans entre les balises &lt;head&gt; et &lt;/head&gt; grâce à la commande : &lt;link rel="stylesheet" type="text/css" href="style.css"/&gt;.
+            l'appeler dans entre les balises <span class="balise">&lt;head&gt;</span> et <span class="balise">&lt;/head&gt;</span> grâce à la commande : <span class="balise">&lt;link</span> rel="stylesheet" type="text/css" href="style.css"/<span class="balise">&gt;</span>.
             Cette balise "link" est autofermante.</p>
           <p> Pour attribuer des caractéristiques à une classe il suffit de les indiquer dans le fichier ".css" de la manière suivante : </p>
           <pre>
@@ -87,10 +90,13 @@
             .carre{
               height:150px;
               width:150px;
-              margin-top: 20px;            <!--marge de 20 pixels au dessus de l'élément--> 
-              border : 3px solid black;    <!-- bordure noire de 3 pixels d'épaisseur en trait continu-->
+              margin-top: 20px;            &lt;!--marge de 20 pixels au dessus de l'élément--&gt; 
+              border : 3px solid black;    &lt;!-- bordure noire de 3 pixels d'épaisseur en trait continu--&gt;
             }
           </pre>
+
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-style" class="jaune"> Plus d'infos ici ! </a>
+
         </section>
 
         <section id="positionCSS">
@@ -100,16 +106,183 @@
             Les éléments "block" sont placés les uns au-dessus des autres. </p>
           <p> Il y a trois types de positions pour les boites que vous avez définies : </p>
           <ul>
-            <li> relative : on précise dans ce cas le décallage (en pixels par exemple) par rapport </li>
+            <li> static : place normale de l'objet dans le flux (valeur par défaut).</li>
+            <li> relative : on précise dans ce cas le décallage (en pixels par exemple) par rapport à la place qu'aurait prendre l'objet dans le flux </li>
+            <li> absolute : on indique la valeur absolue (en pixels) de la position de l'élément par rapport au coin haut gauche de la page. </li>
+            <li> fixed : comme pour la valeur absolue, on indique directement la position de l'élément. Ici le référentiel est l'écran et l'élément apparait toujours au même endroit même lorsque l'on fait défiler la page. </li>
           </ul>
+
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS/position" class="jaune"> Plus d'infos ici ! </a>
+
         </section>
 
         <section id="selecteursCSS">
           <h2 class="bleuOpaque"> Les selecteurs </h2>
+            <p> Un sélecteur permet d'appeler des éléments en HTML afin de leur attribuer des propriétés avec CSS.
+              Pour créer des carrés, nous avons déjà utilisé un sélecteur de type classe dont le nom était ".carré". 
+              Il existe de nombreux types de sélecteurs qui permettent d'attribuer des caractéristiques particulières à différents éléments. 
+              On distingue notamment :</p>
+            <ul>
+              <li> sélecteur d'élement : on écrit directement le nom de l'élément </li> 
+              <li> sélecteur de classe : .nomClasse </li> 
+              <li> sélecteur d'identifiant : #nomId </li> 
+              <li> sélecteur de voisin immédiat : nomVoisin + nomVoisin par exemple dd + dd : la règle s'applique à toute définition suivie d'une définition</li> 
+              <li> sélecteur de voisins indirects ~ . Ex img ~ a : Les régles s'appliquent à l'image si elle est suivie d'une référence, même s'il y a d'autres éléments entre. </li> 
+              <li> sélecteur d'un parent direct (ou plutôt de l'enfant) &gt; . Ex div &gt; p : la règle s'applique à l'enfant p de div s'il le suit directement. </li> 
+              <li> sélecteur parent indirect , même chose mais il peut y avoir des enfants entre div et p (div p). </li> 
+              <li> sélecteur universel * . Il sélectionne tous les éléments, sans exception. </li> 
+              <li> sélecteur pour sélectionner un élément en fonction de la valeur de son attribut [] . Ex [class = "rouge"] :
+                La règle s'applique à tout les éléments entre accolades ayant pour valeur "rouge" </li> 
+            </ul>
+     </section>
+
+
         </section>
 
         <section id="flexboxCSS">
           <h2 class="bleuOpaque"> Flexbox ! </h2>
+            <P> La flexbox c'est un truc magique pour la gestion de la mise en page qui vous facilitera la vie à condition de bien en comprendre le fonctionnement.
+             Personnellement, j'en comprends certaines fonctionnalités mais j'ai encore beaucoup de chemin à parcourrir avant de la maitriser vraiment. 
+             Je vais donc faire bref et vous renvoyer vers : <p>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="jaune"> Une doc remplie d'infos ici ! </a>.</p>
+            <p> L'idée de la flexbox est de donner au contenant la possibilité de redimentionner et modifier ses items pour mieux remplir la place disponible.</p>
+            <p> L'outil flexbox s'utilise avec un contenant (le parent) et des items (les enfants) qui sont situés dans le contenant. Chacun des éléments (parents et enfants)
+              ont des attributs différents qui correspondent à des comportements précis.</p>
+            <p> Prenons un exemple pour créer une boite générale dans laquelle on souhaiterait intégrer deux boites contenant chacune du texte.</p>
+            <p> Exemple de code HTML5:  </p>
+            <pre>
+              &lt;div class="flexbox rouge"&gt;         &lt;!--Contenant (parent) avec un fond rouge--&gt;
+
+                &lt;div class="item vert"&gt;           &lt;!--Item 1 avec un fond vert--&gt;
+                  &lt;p&gt; Mon premier texte &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="item bleu"&gt;           &lt;!--Item 2 avec un fond bleu--&gt;
+                  &lt;p&gt; Mon second texte &lt;/p&gt;
+                &lt;/div&gt;
+
+              &lt;/div&gt;
+            </pre>
+            <p> Et le code CSS3 associé:  </p>
+            <pre>
+              .flexbox{
+                display: flex;                           &lt;!--On indique qu'il s'agit d'une flexbox--&gt;   
+              }
+
+              .item {
+                flex-basis: 50%;                         &lt;!--On choisi que chaque item occupe 50% de l'espace de son parent--&gt;  
+              }
+
+              .rouge {
+                background-color: Tomato;
+              }
+
+              .vert {
+                background-color: YellowGreen;
+              }
+
+              .bleu {
+                background-color: rgba(70,130,180,0.8);
+              }
+            </pre>
+
+            <p> Et ça donne:  </p>
+            <div class="flexbox rouge">
+              <div class="item vert"> 
+                <p> Mon premier texte </p>
+              </div>
+
+              <div class="item bleuOpaque">   
+                <p> Mon second texte </p>
+              </div>
+            </div>
+
+        </section>
+
+        <section id="pseudoCSS">
+          <h2 class="bleuOpaque"> Les gadgets </h2>
+
+          <h3> Les pseudo-classes et pseudo-éléments </h3>
+          <p> La pseudo-classe sert à mettre en évidence un élément lorsqu'il est survolé par la souris.
+          Créons d'abord un carré jaune : </p>
+          <pre>
+            &lt;!--code HTML dans le body&gt;
+            &lt;div class="carre jaune"&gt; &lt;/div&gt;
+
+            &lt;!--code CSS&gt;
+            .carre {
+              height: 150px;
+              width: 150px;
+            }
+
+            .jaune {
+              background-color: Gold;
+            }
+          </pre>
+          <p> Pour créer sa pseudo-classe de manière à ce qu'il se colore en vert lorsqu'on le survole, on ajoute dans le CSS </p>
+          <pre>
+            .jaune:hover{
+              background-color: Green;
+            }
+          </pre>
+          <p> Ce qui donne : </p>
+          <div class="carre jaune"> </div>
+
+          <p> Un pseudo-élément permet d'ajouter des caractères à un groupe d'éléments. Par exemple pour ajouter ** devant tous nos paragraphes on peut écrire dans le CSS : </p>
+          <pre>
+            .p::before{
+              content:"**";
+            }
+          </pre>
+
+          <p> Dans le cas d'un formulaire, on peut créer une pseudo-classe pour un élément en fonction de sa validité. Cela s'écrit : </p>
+          <pre>
+            .input:valid{
+              background-color: Green; (par exemple)
+            }
+            .input:invalid{
+              background-color: red;  (par exemple)
+            }
+          </pre>
+
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes" class="jaune"> Plus d'infos ici pour les pseudo-classes </a>
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments" class="jaune"> et ici pour les pseudo-éléments </a>
+
+          <h3> Les transitions </h3>
+          <p> Pour faire une transition entre deux états d'un éléments il faut rajouter les caractéristiques de la transition dans la classe de l'élément.
+            Les transitions CSS permettent de choisir les propriétés à animer en les listant explicitement, le début de l'animation, la durée de l'animation et la façon dont la transition s'exécutera</p>
+          <p> Prenons un exemple simple pour grossir notre carré jaune et le faire tourner pour qu'il devienne un gros carré vert en 2secondes: </p>
+          <pre>
+            &lt;!--code HTML dans le body&gt;
+            &lt;div class="carre jaune"&gt; &lt;/div&gt;
+
+            &lt;!--code CSS&gt;
+            .carre {
+              height: 150px;
+              width: 150px;
+              transition : width 2s, height 2s, background-color 2s, transform 2s;
+            }
+
+            .jaune {
+              background-color: Gold;
+            }
+
+            .jaune:hover{
+              background-color: Green;
+              height: 300px;
+              width: 300px;
+              transform: rotate(180deg);
+            }
+          </pre>
+          <p> Ce qui donne : </p>
+          <div class="carre jaune1"> </div>
+
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS" class="jaune"> Plus d'infos ici sur les transitions </a> 
+          
+          <h3> Les animations </h3>
+          <div class="carre jaune anime"> </div>
+
+
         </section>
 
       </div>
