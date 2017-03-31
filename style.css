@@ -1,19 +1,22 @@
 .entete {
-  text-align: center;
+  height: 100px;
+  text-align:center;
 }
 
 .flexbox{
   display: flex;
-  flex-flow: row wrap;
+  /*flex-flow: row wrap;*/
   justify-content: space-around;
+  margin-bottom:10px;
 }
 
 .nav {
-  flex-basis: 50%;
+  flex-basis: 20em;
 }
 
 .contenu {
-  flex-basis: 50%;
+  flex-basis: 65em;
+  padding: 10px;
 }
 
 .rouge {
@@ -30,4 +33,15 @@
 
 .bleuOpaque {
   background-color: rgba(70,130,180,0.8);
+}
+
+td {
+ border: 1px double black; /* auront une bordure de 1px */
+ text-align : center;
+ empty-cells: hide, show;
+}
+
+th {
+ border: 2px double red; /* auront une bordure de 1px */
+ empty-cells: hide, show;
 }

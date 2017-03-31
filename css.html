@@ -3,44 +3,125 @@
   <head>
     <meta charset="utf-8" /> <!--pour choisir le code d encodage-->
     <title> HTML et CSS débutant </title>
-    <link rel="stylesheet" type="text/css" href="reset_css.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
 
-    <header class="flexbox">
-      <h1 class="entete rouge"> Bases de CSS3 </h1>
+    <header class="flexbox rouge" id="hautdepage">
+      <img src="manchot.jpg" alt="superbe manchot pour la déco">
+      <h1 class="entete"> Bases de CSS3 </h1>
+      <img src="geek.jpg" alt="et un geek, toujours pour la déco">
     </header>
 
-    <div class="navEtContenu">
+    <div class="flexbox">
       <nav class="nav vert">
         <ul> 
+          <li> <a href="index.html"> Page principale </a> </li>   
+          <li> <a href="html.html"> Bases de HTML5 </a> </li>
           <li> CSS </li>
           <li> 
             <ul> 
               <li> <a href="#introCSS"> Introduction </a> </li>
-              <li> <a href="#structureHtml"> Structure de base </a> </li>
-              <li> <a href="#docHtml"> Le corps du document </a> </li>
-              <li> <a href="#organisationHtml"> Organisation de votre document </a> </li>
-              <li> <a href="#liensHtml"> Les liens HyperText </a> </li>
-              <li> <a href="#imagesHtml"> Insérer une image </a> </li>
-              <li> <a href="#tableauxHtml"> Les tableaux </a> </li>
+              <li> <a href="#classesCSS"> La notion de classes </a> </li>
+              <li> <a href="#margesCSS"> Les marges </a> </li>
+              <li> <a href="#positionCSS"> Le positionnement </a> </li>
+              <li> <a href="#selecteursCSS"> Les selecteurs </a> </li>
+              <li> <a href="#flexboxCSS"> Flexbox ! </a> </li>
             </ul>
-          </li>
-          <li> <a href="index.html"> Retour vers la page principale </a> </li>    
+          </li> 
         </ul>
       </nav>
 
       <div class="contenu bleuTransparent">
         <section id="introCSS">
           <h2 class="bleuOpaque"> Introduction </h2>
-          Le CSS3 est un outil pour la mise en forme de votre site web qui vient agrémenter le contenu sémantique 
+          <p> Le CSS3 est un outil pour la mise en forme de votre site web qui vient agrémenter le contenu sémantique introduit 
+            grâce au HTML. On travaille la mise en page grâce à une imbrication de "boites" qui contiennent les différents éléments à organiser
+            Il existe deux types de boites :</p>
+          <ul>
+            <li> les boites "in line" qui s'introduisent grâce à la balise &lt;span&gt;. Elles permettent de mettre en forme des éléments qui se trouvent dans une ligne.</li>
+            <li> les boites "block" qui s'introduisent grâce à la balise &lt;div&gt;. Elles permettent de mettre en forme des éléments qui sont regroupés dans un bloc. </li>
+          </ul>
 
         </section>
+
+        <section id="classesCSS">
+          <h2 class="bleuOpaque"> La notion de classes </h2>
+          <p> L'idéal est de définir des règles de mise en page pour des "classes" d'éléments. Une classe correspond à un groupe d'éléments
+            qui possèdent des caractéristiques communes. Par exemple, si on veut dessiner plusieurs carrés de la même taille mais de couleurs différentes, on
+            définira une classe "carré" qui définira la taille de ces carrés, puis une classe par couleur (bleu, rouge, vert par exemple). On pourra en plus réutiliser chaque couleur pour d'autres 
+            formes géométriques définies dans d'autres classes. Par exemple, en ajoutant un classe "triangle", on pourra très facilement créer des triangles rouges, verts et bleus avec exactement les 
+            mêmes teintes que nos carrés sans avaoir à les redéfinir, super non ?!? </p>
+          <p> Pour cela, le plus simple est de créer un fichier qui répertorie les caractéristiques de toutes les classes définies. Ce fichier
+            doit avoir une extension ".css". On va par exemple l'appeler "style.css". Pour que le lien se fasse avec notre fichier html, il faut
+            l'appeler dans entre les balises &lt;head&gt; et &lt;/head&gt; grâce à la commande : &lt;link rel="stylesheet" type="text/css" href="style.css"/&gt;.
+            Cette balise "link" est autofermante.</p>
+          <p> Pour attribuer des caractéristiques à une classe il suffit de les indiquer dans le fichier ".css" de la manière suivante : </p>
+          <pre>
+            .nomClasse {
+              caracteristique1;
+              caractéristique2;
+            }
+          </pre>
+          <p> Par exemple pour créer une classe de carrés de 150pixels de coté et une classe rouge, on note : </p>
+          <pre>
+            .carre{
+              height:150px;
+              width:150px;
+            }
+
+            .rouge{
+              color: red;
+            }
+          </pre>
+          <p> On peut alors créer une boite qui va contenir un carré rouge dans notre fichier ".html" en indiquant &lt;div class="carre rouge"&gt; &lt;/div&gt; </p>
+        </section>
+
+        <section id="margesCSS">
+          <h2 class="bleuOpaque"> Les marges </h2>
+          <p> Chaque élément défini dans une boite possède une marge intérieure (padding), une bordure (border) et une marge extérieure (margin) 
+            qui s'organisent de cette manière : </p>
+          <img src="marges.png" alt="Schéma des padding, border et margin autour d'un élément">
+          <p> On peut modifier chacunes des marges et des bordures dans une classe en leur attribuant une taille donnée. Par exemple :</p>
+          <pre>
+            .carre{
+              height:150px;
+              width:150px;
+              margin-top: 20px;            <!--marge de 20 pixels au dessus de l'élément--> 
+              border : 3px solid black;    <!-- bordure noire de 3 pixels d'épaisseur en trait continu-->
+            }
+          </pre>
+        </section>
+
+        <section id="positionCSS">
+          <h2 class="bleuOpaque"> Le positionnement </h2>
+          <p> La position d'une boite sur votre site internet est complètement liée au flux. Késako ? Il s'agit tout simplement de l'ordre dans lequel
+            les éléments s'affichent sur la page. Les éléments "in ligne" seont placés les uns à côtés des autres tant qu'il y a de la place sur la ligne. 
+            Les éléments "block" sont placés les uns au-dessus des autres. </p>
+          <p> Il y a trois types de positions pour les boites que vous avez définies : </p>
+          <ul>
+            <li> relative : on précise dans ce cas le décallage (en pixels par exemple) par rapport </li>
+          </ul>
+        </section>
+
+        <section id="selecteursCSS">
+          <h2 class="bleuOpaque"> Les selecteurs </h2>
+        </section>
+
+        <section id="flexboxCSS">
+          <h2 class="bleuOpaque"> Flexbox ! </h2>
+        </section>
+
       </div>
 
-
     </div>
+
+    <footer class="entete rouge">
+      <ul> 
+        <li> <a href="#hautdepage"> Haut de page </a> </li>
+        <li> <a href="index.html"> Retour vers la page principale </a> </li>
+      </ul>
+    </footer>
 
 
 	</body>
