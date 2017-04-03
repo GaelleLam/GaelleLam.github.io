@@ -15,11 +15,11 @@
 
     <div class="flexbox">
       <nav class="nav vert">
+        <h2 class="vertOpaque textcenter"> Sommaire </h2>
         <ul> 
           <li> <a href="index.html"> Page principale </a> </li>   
           <li> <a href="html.html"> Bases de HTML5 </a> </li>
-          <li> CSS </li>
-          <li> 
+          <li> CSS3 
             <ul> 
               <li> <a href="#introCSS"> Introduction </a> </li>
               <li> <a href="#classesCSS"> La notion de classes </a> </li>
@@ -37,7 +37,7 @@
         <section id="introCSS">
           <h2 class="bleuOpaque"> Introduction </h2>
           <p> Le CSS3 est un outil pour la mise en forme de votre site web qui vient agrémenter le contenu sémantique introduit 
-            grâce au HTML. On travaille la mise en page grâce à une imbrication de "boites" qui contiennent les différents éléments à organiser
+            grâce au HTML. On travaille la mise en page grâce à une imbrication de "boites" qui contiennent les différents éléments à organiser.
             Il existe deux types de boites :</p>
           <ul>
             <li> les boites "in line" qui s'introduisent grâce à la balise <span class="balise">&lt;span&gt;</span>. Elles permettent de mettre en forme des éléments qui se trouvent dans une ligne.</li>
@@ -280,10 +280,32 @@
           <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS" class="jaune"> Plus d'infos ici sur les transitions </a> 
           
           <h3> Les animations </h3>
+          <p> Enfin, pour animer notre carré jaune, il faut lui donner les "instructions" de l'animation dans le css. Par exemple, pour le faire déplacer de entre les bords
+            droits et gauches de notre boite, il suffit de lui ajouter une classe (qui s'appelle ici "anime") qui contient les informations nécessaires: </p>
+          <pre>
+            &lt;!--code HTML dans le body&gt;
+            &lt;div class="carre jaune anime"&gt; &lt;/div&gt;
+
+            &lt;!--code CSS&gt;
+            .carre {
+              height: 150px;
+              width: 150px;
+              transition : width 2s, height 2s, background-color 2s, transform 2s;
+            }
+
+            .jaune {
+              background-color: Gold;
+            }
+
+            .anime {
+              animation: 4s linear 0s infinite anime;
+            }
+            @keyframes anime{from {margin-left:0%;} to {margin-left:100%;}}
+          </pre>
+          <p> Ce qui donne : </p>
           <div class="carre jaune anime"> </div>
-
-
         </section>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation" class="jaune"> Plus d'infos ici sur les animations </a> 
 
       </div>
 
@@ -293,6 +315,8 @@
       <ul> 
         <li> <a href="#hautdepage"> Haut de page </a> </li>
         <li> <a href="index.html"> Retour vers la page principale </a> </li>
+        <li> <a href="html.html"> Lien vers la page HTML5 </a> </li>
+        <li> <a href="contact.html"> Contact </a> </li>
       </ul>
     </footer>
 
